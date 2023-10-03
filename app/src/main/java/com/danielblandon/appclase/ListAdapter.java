@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class ListAdapter extends BaseAdapter {
     // Context es para saber el contexto donde estoy
@@ -40,8 +41,15 @@ public class ListAdapter extends BaseAdapter {
     public View getView(int i, View vista, ViewGroup viewGroup){
         vista = inflater.inflate(R.layout.list_item,null);
 
-        ImageView  fotoPerfil =vista.findViewById(R.id.)
-        return vista;}
+        ImageView  fotoPerfil = vista.findViewById(R.id.imagen);
+        TextView   nombreAnimal= vista.findViewById(R.id.nombreAnimal);
+        TextView   descripcion= vista.findViewById(R.id.descripcion);
+        TextView   hora = vista.findViewById(R.id.hora);
 
+        fotoPerfil.setImageResource(idImagen);
+        nombreAnimal.setText(nombres[i]);
+        descripcion.setText(mensajes[i]);
+        hora.setText(horaUltMen[i]);
+        return vista;}
 
 }
